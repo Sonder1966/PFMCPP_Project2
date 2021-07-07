@@ -97,10 +97,10 @@ void variableDeclarations()
  example:
  note: this example shows the result after completing steps 3-8
  */
-bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
+bool rentACar(int rentalDuration, int carType = 0)  
 { 
-    ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
-    return {}; //if your function returns something other than void, add 'return {};' at the end of it. test
+    ignoreUnused(rentalDuration, carType); 
+    return {}; 
 } 
 
 /*
@@ -108,7 +108,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  */
 int reverbParameters (int ER = 3, int time = 8)
 {
-    ignoreUnused (ER,time);
+    ignoreUnused(ER,time);
     return {};
 }
 /*
@@ -225,9 +225,10 @@ int main()
     //10)
     auto answer =returnAnswer (1);
     
-    ignoreUnused(carRented);
+    
+    ignoreUnused (carRented,reverb,compress,delay,chorus,mod,dist,FX,signal,msg,answer);
+
     std::cout << "good to go!" << std::endl;
     
     return 0;    
 }
- 
