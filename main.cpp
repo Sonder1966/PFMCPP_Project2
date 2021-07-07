@@ -87,9 +87,9 @@ void variableDeclarations()
     char letter = 'b';
     char alpha = 'c';
 
-    ignoreUnused (numbers,threshold,ratio, height,width,length,reverbTime,reverbLength,reverbEr,distortion,delay,equalistion, initial, letter, alpha);
+    ignoreUnused (number, numbers, threshold, ratio, height, width, length, reverbTime,reverbLength, reverbEr, distortion, delay, equalistion, initial, letter, alpha);
 
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+ //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -108,7 +108,7 @@ bool rentACar(int rentalDuration, int carType = 0)
  */
 int reverbParameters (int ER = 3, int time = 8)
 {
-    ignoreUnused(ER,time);
+    ignoreUnused(ER, time);
     return {};
 }
 /*
@@ -116,7 +116,7 @@ int reverbParameters (int ER = 3, int time = 8)
  */
 int compressorParameters (int thres = 4, int ratio = 2)
 {
-    ignoreUnused (thres,ratio);
+    ignoreUnused (thres, ratio);
     return{};
 }
 /*
@@ -124,7 +124,7 @@ int compressorParameters (int thres = 4, int ratio = 2)
  */
 float delayTime (int time1= 32, int time2 = 34)
 {
-ignoreUnused (time1,time2);
+ignoreUnused (time1, time2);
     return{};
 }
 
@@ -133,7 +133,7 @@ ignoreUnused (time1,time2);
  */
 float chorusEffect (float mix = 99.2f, float mod = 33.2f)
 {
-    ignoreUnused (mix,mod);
+    ignoreUnused (mix, mod);
     return{};
 }
 /*
@@ -141,7 +141,7 @@ float chorusEffect (float mix = 99.2f, float mod = 33.2f)
  */
 double modulation (double time = 21.2, double depth =12.2)
 {
-   ignoreUnused (time,depth);
+   ignoreUnused (time, depth);
     return{}; 
 }
 /*
@@ -149,7 +149,7 @@ double modulation (double time = 21.2, double depth =12.2)
  */
 double distortion  (double mix, double amount = 99.9, double depth =9.9)
 {
-    ignoreUnused (mix,amount,depth);
+    ignoreUnused (mix, amount, depth);
     return{}; 
 }
 /*
@@ -157,7 +157,7 @@ double distortion  (double mix, double amount = 99.9, double depth =9.9)
  */
 bool effectOn (int isOn, int isOff)
 {
-    ignoreUnused (isOn,isOff);
+    ignoreUnused (isOn, isOff);
     return{}; 
 }
 /*
@@ -165,7 +165,7 @@ bool effectOn (int isOn, int isOff)
  */
 bool processSignal (double amount, double width)
 {
-    ignoreUnused (amount,width);
+    ignoreUnused (amount, width);
     return{}; 
 }
 /*
@@ -226,7 +226,7 @@ int main()
     auto answer =returnAnswer (1);
     
     
-    ignoreUnused (carRented,reverb,compress,delay,chorus,mod,dist,FX,signal,msg,answer);
+    ignoreUnused (carRented, reverb, compress, delay, chorus, mod, dist, FX, signal, msg,answer);
 
     std::cout << "good to go!" << std::endl;
     
