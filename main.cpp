@@ -122,7 +122,7 @@ int compressorParameters (int thres = 4, int ratio = 2)
 /*
  3)
  */
-float delayTime (float time1= 32.4f, float time2 = 34.3f)
+float delayTime (int time1= 32, int time2 = 34)
 {
 ignoreUnused (time1,time2);
     return{};
@@ -203,13 +203,13 @@ char returnAnswer ( int alphabet)
 int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
-    auto carRented = rentACar(6, 2); 
+    auto carRented = rentACar (6, 2); 
     //1)
     auto reverb = reverbParameters (7, 20);
     //2)
     auto compress = compressorParameters (100, 0);
     //3)
-    auto delay = delayTime (21.3, 33.3);
+    auto delay = delayTime (21, 33);
     //4)
     auto chorus = chorusEffect (21.3f, 44.2f);
     //5)
