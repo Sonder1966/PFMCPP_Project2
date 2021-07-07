@@ -226,7 +226,7 @@ int main()
     auto answer = returnAnswer(1);
     
     
-    ignoreUnused (carRented, reverb, compress, delay, chorus, mod, dist, FX, signal, msg, answer);
+    ignoreUnused(carRented, reverb, compress, delay, chorus, mod, dist, FX, signal, msg, answer);
 
     std::cout << "good to go!" << std::endl;
     
