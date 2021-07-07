@@ -100,7 +100,7 @@ void variableDeclarations()
 bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
 { 
     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
-    return {}; //if your function returns something other than void, add 'return {};' at the end of it.
+    return {}; //if your function returns something other than void, add 'return {};' at the end of it. test
 } 
 
 /*
