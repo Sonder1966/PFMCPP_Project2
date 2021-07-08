@@ -15,7 +15,13 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
- 
+
+    int
+    float 
+    bool
+    char
+    void
+    double
  
  
  
@@ -60,10 +66,30 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
 
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    int numbers = 0;
+    int threshold = 2;
+    int ratio = 4;
+
+    float height = 1.3f;
+    float width = 1.8f;
+    float length = 1.9f;
+
+    double reverbTime = 1.34;
+    double reverbLength = 1.346;
+    double reverbEr = 1.566;
+
+    bool distortion = false;
+    bool delay = true;
+    bool equalistion = true;
+
+    char initial = 'a';
+    char letter = 'b';
+    char alpha = 'c';
+
+    ignoreUnused (number, numbers, threshold, ratio, height, width, length, reverbTime,reverbLength, reverbEr, distortion, delay, equalistion, initial, letter, alpha);
+
+ //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -71,51 +97,94 @@ void variableDeclarations()
  example:
  note: this example shows the result after completing steps 3-8
  */
-bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
+bool rentACar(int rentalDuration, int carType = 0)  
 { 
-    ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
-    return {}; //if your function returns something other than void, add 'return {};' at the end of it.
+    ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function 
+    return {}; //if your function returns something other than void, add 'return {};' at the end of it. 
 } 
 
 /*
  1)
  */
-
+int reverbParameters(int ER = 3, int time = 8)
+{
+    ignoreUnused(ER, time);
+    return {};
+}
 /*
  2)
  */
-
+int compressorParameters(int thres = 4, int ratio = 2)
+{
+    ignoreUnused(thres, ratio);
+    return{};
+}
 /*
  3)
  */
+float delayTime(int time1 = 32, int time2 = 34)
+{
+ignoreUnused(time1, time2);
+    return{};
+}
 
 /*
  4)
  */
-
+float chorusEffect(float mix = 99.2f, float mod = 33.2f)
+{
+    ignoreUnused(mix, mod);
+    return{};
+}
 /*
  5)
  */
-
+double modulation(double time = 21.2, double depth = 12.2)
+{
+   ignoreUnused(time, depth);
+    return{}; 
+}
 /*
  6)
  */
-
+double distortion(double mix, double amount = 99.9, double depth = 9.9)
+{
+    ignoreUnused(mix, amount, depth);
+    return{}; 
+}
 /*
  7)
  */
-
+bool effectOn(int isOn, int isOff)
+{
+    ignoreUnused(isOn, isOff);
+    return{}; 
+}
 /*
  8)
  */
-
+bool processSignal(double amount, double width)
+{
+    ignoreUnused(amount, width);
+    return{}; 
+}
 /*
  9)
  */
-
+char message(float letter)
+{
+    ignoreUnused(letter);
+    return{}; 
+}
 /*
  10)
  */
+char returnAnswer(int alphabet)
+{
+    ignoreUnused(alphabet);
+    return{}; 
+}
+
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -135,29 +204,31 @@ int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
-    
     //1)
-    
+    auto reverb = reverbParameters(7, 20);
     //2)
-    
+    auto compress = compressorParameters(100, 0);
     //3)
-    
+    auto delay = delayTime(21, 33);
     //4)
-    
+    auto chorus = chorusEffect(21.3f, 44.2f);
     //5)
-    
+    auto mod = modulation(21.1, 45.3);
     //6)
-    
+    auto dist = distortion(1, 0);
     //7)
-    
+    auto FX = effectOn(0,1);
     //8)
-    
+    auto signal = processSignal(23.2, 78.2);
     //9)
-    
+    auto msg = message(33.3f);
     //10)
+    auto answer = returnAnswer(1);
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, reverb, compress, delay, chorus, mod, dist, FX, signal, msg, answer);
+
     std::cout << "good to go!" << std::endl;
+    
     return 0;    
 }
