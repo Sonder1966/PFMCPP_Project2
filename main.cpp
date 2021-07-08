@@ -122,7 +122,7 @@ int compressorParameters(int thres = 4, int ratio = 2)
 /*
  3)
  */
-float delayTime(int time1= 32, int time2 = 34)
+float delayTime(int time1 = 32, int time2 = 34)
 {
 ignoreUnused(time1, time2);
     return{};
@@ -139,7 +139,7 @@ float chorusEffect(float mix = 99.2f, float mod = 33.2f)
 /*
  5)
  */
-double modulation(double time = 21.2, double depth =12.2)
+double modulation(double time = 21.2, double depth = 12.2)
 {
    ignoreUnused(time, depth);
     return{}; 
@@ -147,7 +147,7 @@ double modulation(double time = 21.2, double depth =12.2)
 /*
  6)
  */
-double distortion(double mix, double amount = 99.9, double depth =9.9)
+double distortion(double mix, double amount = 99.9, double depth = 9.9)
 {
     ignoreUnused(mix, amount, depth);
     return{}; 
